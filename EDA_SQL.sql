@@ -37,3 +37,15 @@ SELECT TOP (15) profissao , salario_anual
 FROM clientes
 GROUP BY profissao , salario_anual
 ORDER BY salario_anual asc
+
+//*Qtde. de contas e cartões por profissão*//
+
+SELECT DISTINCT profissao , SUM (CAST (num_contas as numeric)) as 'Qtde de Contas por Profissão'
+FROM clientes
+GROUP BY  profissao
+ORDER BY 'Qtde de Contas por Profissão' desc
+
+SELECT DISTINCT profissao , SUM (CAST (num_cartoes as numeric)) as 'Qtde de Cartões por Profissão'
+FROM clientes
+GROUP BY  profissao
+ORDER BY 'Qtde de Cartões por Profissão' desc
