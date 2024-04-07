@@ -69,11 +69,3 @@ SELECT DISTINCT profissao , SUM (CAST (num_cartoes as numeric)) as 'Qtde de Cart
 FROM clientes
 GROUP BY  profissao
 ORDER BY 'Qtde de Cartões por Profissão' desc
-
-
-
-
-
-
-
-
